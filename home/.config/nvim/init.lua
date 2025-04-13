@@ -50,6 +50,8 @@ if vim.fn.exists('g:neovide') then
   vim.o.guifont = 'Cousine Nerd Font'
   vim.g.neovide_hide_mouse_when_typing = true
   vim.g.neovide_scroll_animation_length = 0.1
+  vim.g.neovide_opacity = 0.8
+  vim.g.neovide_normal_opacity = 0.8
   vim.opt.title = true
   vim.opt.titlestring = vim.env.PWD
 

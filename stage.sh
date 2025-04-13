@@ -12,6 +12,8 @@ end
 
 stagehome ".config/alacritty.toml"
 
+stagehome ".config/neovide"
+
 stagehome ".config/niri/config.kdl"
 
 stagehome ".config/nvim/init.lua"

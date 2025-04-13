@@ -20,6 +20,8 @@ end
 
 installhome ".config/alacritty.toml"
 
+installhome ".config/neovide"
+
 installhome ".config/niri/config.kdl"
 
 installhome ".config/nvim/init.lua"
