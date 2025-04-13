@@ -24,7 +24,8 @@ installhome ".config/niri/config.kdl"
 
 installhome ".config/nvim/init.lua"
 
-installhome ".config/systemd/user/"
+installhome ".config/systemd/user/mpvpaper.service"
+installhome ".config/systemd/user/niri.service.wants/mpvpaper.service"
 echo "start waybar on login (service already exists)"
 ln -s /usr/lib/systemd/user/waybar.service ~/.config/systemd/user/niri.service.wants/
 

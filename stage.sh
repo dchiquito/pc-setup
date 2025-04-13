@@ -5,6 +5,8 @@
 
 function stagehome -a file
   echo "$file"
+  set parent $(dirname $file)
+  mkdir -p home/$parent
   cp -r ~/$file home/$file
 end
 
@@ -14,4 +16,5 @@ stagehome ".config/niri/config.kdl"
 
 stagehome ".config/nvim/init.lua"
 
-stagehome ".config/systemd/"
+stagehome ".config/systemd/user/mpvpaper.service"
+stagehome ".config/systemd/user/niri.service.wants/mpvpaper.service"
