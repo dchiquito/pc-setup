@@ -20,3 +20,5 @@ stagehome ".config/nvim/init.lua"
 
 stagehome ".config/systemd/user/mpvpaper.service"
 stagehome ".config/systemd/user/niri.service.wants/mpvpaper.service"
+
+stagehome ".tmux.conf"

@@ -31,12 +31,12 @@ installhome ".config/systemd/user/niri.service.wants/mpvpaper.service"
 echo "start waybar on login (service already exists)"
 ln -s /usr/lib/systemd/user/waybar.service ~/.config/systemd/user/niri.service.wants/
 
+installhome ".tmux.conf"
+
 echo "wallpaper"
 cp -r wallpaper ~/Videos/
 
 echo "TODO factorio desktop entries"
-
-echo "TODO tmux"
 
 echo "TODO sudo nvim"
 
