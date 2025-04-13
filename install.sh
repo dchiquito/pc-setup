@@ -7,6 +7,7 @@ echo "Install list:"
 echo "sudo dnf copr enable yalter/niri"
 echo "sudo dnf install git htop niri nvim"
 echo "Install neovide from https://github.com/neovide/neovide/releases"
+echo "Set fish as default shell: chsh -s /usr/bin/fish"
 
 echo "Copy fonts to /usr/local/share/fonts/"
 echo "Set permissions as per https://docs.fedoraproject.org/en-US/quick-docs/fonts/"
