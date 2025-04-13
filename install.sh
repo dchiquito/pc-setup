@@ -11,18 +11,31 @@ echo "Install neovide from https://github.com/neovide/neovide/releases"
 echo "Copy fonts to /usr/local/share/fonts/"
 echo "Set permissions as per https://docs.fedoraproject.org/en-US/quick-docs/fonts/"
 
-function install -a parent file
-  echo "$parent/$file"
+function installhome -a file
+  set parent "$(dirname "$file")"
+  echo "TODO $parent"
+  echo "$file"
 end
 
-install ".config/niri" "config.kdl"
-# mkdir -p ~/.config/niri && cp home/.config/niri/config.kdl ~/.config/niri/config.kdl
+installhome ".config/niri/config.kdl"
 
-echo ".config/nvim/init.lua"
-# mkdir -p ~/.config/nvim && cp home/.config/nvim/init.lua ~/.config/nvim/init.lua
+installhome ".config/nvim/init.lua"
 
-echo "systemd startup services"
-mkdir -p ~/.config/systemd/user/niri.service.wants/
+installhome ".config/systemd/user/"
+echo "start waybar on login (service already exists)"
 ln -s /usr/lib/systemd/user/waybar.service ~/.config/systemd/user/niri.service.wants/
 
-echo "TODO mpvpaper -o \"no-audio --loop-playlist\" eDP-1 ~/Videos/Wallpaper/"
+echo "wallpaper"
+cp -r wallpaper ~/Videos/
+
+echo "TODO factorio desktop entries"
+
+echo "TODO neovide touch"
+
+echo "TODO alacritty"
+
+echo "TODO tmux"
+
+echo "TODO sudo nvim"
+
+echo "TODO https://discussion.fedoraproject.org/t/how-to-install-use-polkit-on-sway/148247"

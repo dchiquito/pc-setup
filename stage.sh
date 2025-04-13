@@ -5,10 +5,11 @@
 
 function stagehome -a file
   echo "$file"
-  cp ~/$file home/$file
+  cp -r ~/$file home/$file
 end
 
 stagehome ".config/niri/config.kdl"
 
 stagehome ".config/nvim/init.lua"
 
+stagehome ".config/systemd/"
