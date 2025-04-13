@@ -8,6 +8,8 @@ function stagehome -a file
   cp -r ~/$file home/$file
 end
 
+stagehome ".config/alacritty.toml"
+
 stagehome ".config/niri/config.kdl"
 
 stagehome ".config/nvim/init.lua"

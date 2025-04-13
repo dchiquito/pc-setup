@@ -17,6 +17,8 @@ function installhome -a file
   echo "$file"
 end
 
+installhome ".config/alacritty.toml"
+
 installhome ".config/niri/config.kdl"
 
 installhome ".config/nvim/init.lua"
