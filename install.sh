@@ -36,10 +36,6 @@ cp -r wallpaper ~/Videos/
 
 echo "TODO factorio desktop entries"
 
-echo "TODO neovide touch"
-
-echo "TODO alacritty"
-
 echo "TODO tmux"
 
 echo "TODO sudo nvim"
