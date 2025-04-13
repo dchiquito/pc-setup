@@ -41,3 +41,5 @@ echo "TODO factorio desktop entries"
 echo "TODO sudo nvim"
 
 echo "TODO https://discussion.fedoraproject.org/t/how-to-install-use-polkit-on-sway/148247"
+
+echo "TODO second monitor"

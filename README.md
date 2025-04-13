@@ -58,4 +58,5 @@ mpvpaper -o "no-audio --loop-playlist" eDP-1 ~/Videos/Wallpaper/
 
 Put some transparency on alacritty and neovide, set up a systemd user service to start it on login, and we're all set!
 
-
+# tmux
+tmux is very cool but I find the mouse and copy/paste UX highly unintuitive. My previous config required `xclip` to get the clipboard working nicely, so I had to upgrade it to `wl-clipboard`.
