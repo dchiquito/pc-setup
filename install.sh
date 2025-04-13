@@ -13,8 +13,9 @@ echo "Set permissions as per https://docs.fedoraproject.org/en-US/quick-docs/fon
 
 function installhome -a file
   set parent "$(dirname "$file")"
-  echo "TODO $parent"
-  echo "$file"
+  echo ~/$file
+  mkdir -p ~/$parent
+  cp -r "home/$file" ~/$file
 end
 
 installhome ".config/alacritty.toml"
