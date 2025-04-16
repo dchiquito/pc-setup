@@ -5,7 +5,7 @@
 
 echo "Install list:"
 echo "sudo dnf copr enable yalter/niri"
-echo "sudo dnf install git htop niri nvim"
+echo "sudo dnf install git htop niri nvim uv"
 echo "Install neovide from https://github.com/neovide/neovide/releases"
 echo "Set fish as default shell: chsh -s /usr/bin/fish"
 
@@ -19,6 +19,13 @@ function installhome -a file
   cp -r "home/$file" ~/$file
 end
 
+function installroot -a file
+  set parent "$(dirname "$file")"
+  echo /$file
+  sudo mkdir -p /$parent
+  sudo cp -r $file /$file
+end
+
 installhome ".config/alacritty.toml"
 
 installhome ".config/neovide"
@@ -27,12 +34,14 @@ installhome ".config/niri/config.kdl"
 
 installhome ".config/nvim/init.lua"
 
-installhome ".config/systemd/user/mpvpaper.service"
-installhome ".config/systemd/user/niri.service.wants/mpvpaper.service"
+installhome ".config/systemd/user/wallpaper.service"
 echo "start waybar on login (service already exists)"
+ln -s ~/.config/systemd/user/wallpaper.service ~/.config/systemd/user/niri.service.wants/
 ln -s /usr/lib/systemd/user/waybar.service ~/.config/systemd/user/niri.service.wants/
 
 installhome ".tmux.conf"
+
+installroot "usr/local/bin/wallpaper.py"
 
 echo "wallpaper"
 cp -r wallpaper ~/Videos/

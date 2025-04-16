@@ -444,6 +444,12 @@ require("lazy").setup({
                 },
               },
             })
+          elseif server_name == 'ruff' then
+            require('lspconfig').ruff.setup({
+                settings = {
+
+                }
+            })
           elseif server_name == 'kotlin_language_server' then
             require('lspconfig')[server_name].setup({
               on_attach = on_attach,

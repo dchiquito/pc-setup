@@ -4,5 +4,5 @@ After=graphical-session.target
 Requisite=graphical-session.target
 
 [Service]
-ExecStart=/usr/local/bin/mpvpaper -o "no-audio --loop-playlist" eDP-1 /home/daniel/Videos/wallpaper/
+ExecStart=/usr/local/bin/wallpaper.py
 Restart=on-failure

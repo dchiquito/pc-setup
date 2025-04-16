@@ -10,6 +10,8 @@ I set up a LiveUSB with Fedora 42 + Sway and let it rip. Hostname `crowley` and 
 Odds and ends I needed to `dnf install`:
 * git
 * htop
+* nvim
+* uv
 
 Things I handily did not need to install:
 * tmux
